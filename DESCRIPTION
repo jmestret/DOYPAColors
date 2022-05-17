@@ -1,0 +1,24 @@
+Package: doypa
+Type: Package
+Title: Don't Overthink Your PAlette
+Version: 0.1.0
+Date: "`r Sys.Date()`"
+Authors@R: person("Jorge", "Mestre-Tomás", email = "jormart2@alu.uv.es",
+		  role = c("aut", "cre"))
+Description: This package generates different color palettes compatible with ggplot2.
+Depends: R (>= 3.5.0)
+Imports:
+	ggplot2,
+	grDevices
+Suggests:
+	knitr,
+	rmarkdown
+URL: https://github.com/jorgemt98/doypa/
+BugReports: https://github.com/jorgemt98/doypa/issues
+VignetteBuilder: knitr
+License: MIT + file LICENSE
+Encoding: UTF-8
+Language: en-US
+LazyData: true
+LazyLoad: yes
+RoxygenNote: 7.2.0
