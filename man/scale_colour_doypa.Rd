@@ -27,6 +27,9 @@ Available palettes: list_doypa_pals().}
 
 \item{...}{Additional parameters to pass to ggplot2's scale_color functions.}
 }
+\value{
+A `ggplot2` color scale suitable for adding to a `ggplot2` object to control color aesthetics.
+}
 \description{
 This function sets the color scale for ggplot2 using DOYPAColors color palettes.
 }

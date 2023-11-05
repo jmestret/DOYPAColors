@@ -248,7 +248,7 @@ list_doypa_pals <- function() {
 #' 
 #' @param palette Character string specifying the name of a specific DOYPAColors palette to preview. If provided, this overrides 'colors'.
 #' @param colors A vector of colors to preview.
-#'
+#' @return A 'ggplot' visualization of DOYPAColors color palettes for exploring and selecting color schemes in your data visualizations.
 #' @export
 #' @examples
 #' # Preview a specific DOYPAColors palette by name
@@ -312,7 +312,7 @@ ggplot(data, aes(fill = .data$cols, y = .data$value, x = .data$value)) +
 #' @param ramp Boolean indicating whether to use a color ramp (gradient) or a vector of colors (default: FALSE).
 #' @param discrete Boolean indicating whether to generate a discrete or continuous palette (default: continuous).
 #' @param ... Additional parameters to pass to ggplot2's scale_fill functions.
-#' 
+#' @return A `ggplot2` fill scale suitable for adding to a `ggplot2` object to control fill aesthetics.
 #' @export
 #' @examples 
 #' library(ggplot2)
@@ -353,7 +353,7 @@ scale_fill_doypa <- function(palette = NULL, n = NULL, reverse = FALSE, ramp = F
 #' @param reverse Boolean indicating whether to reverse the order of colors in the palette (default: FALSE).
 #' @param discrete Boolean indicating whether to generate a discrete or continuous palette (default: continuous).
 #' @param ... Additional parameters to pass to ggplot2's scale_color functions.
-#' 
+#' @return A `ggplot2` color scale suitable for adding to a `ggplot2` object to control color aesthetics.
 #' @export
 #' @examples 
 #' library(ggplot2)
@@ -394,7 +394,7 @@ scale_color_doypa <- function(palette = NULL, n = NULL, reverse = FALSE, ramp = 
 #' @param reverse Boolean indicating whether to reverse the order of colors in the palette (default: FALSE).
 #' @param discrete Boolean indicating whether to generate a discrete or continuous palette (default: continuous).
 #' @param ... Additional parameters to pass to ggplot2's scale_color functions.
-#' 
+#' @return A `ggplot2` color scale suitable for adding to a `ggplot2` object to control color aesthetics.
 #' @export
 scale_colour_doypa <- scale_color_doypa
 

@@ -11,6 +11,9 @@ preview_doypa_pals(palette = NULL, colors = NULL)
 
 \item{colors}{A vector of colors to preview.}
 }
+\value{
+A 'ggplot' visualization of DOYPAColors color palettes for exploring and selecting color schemes in your data visualizations.
+}
 \description{
 This function generates a visual preview of DOYPAColors color palettes, allowing you to explore and select color schemes for your data visualizations.
 }

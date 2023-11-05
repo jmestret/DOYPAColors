@@ -27,6 +27,9 @@ Available palettes: list_doypa_pals().}
 
 \item{...}{Additional parameters to pass to ggplot2's scale_fill functions.}
 }
+\value{
+A `ggplot2` fill scale suitable for adding to a `ggplot2` object to control fill aesthetics.
+}
 \description{
 This function sets the fill scale for ggplot2 using DOYPAColors color palettes.
 }
