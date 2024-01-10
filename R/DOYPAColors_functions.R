@@ -15,8 +15,8 @@ doypa_pals <- list(
   
   # Blue2Red Palette
   blue2red = c(
-    "#1984c5", "#22a7f0", "#63bff0", "#a7d5ed", "#e2e2e2",
-    "#e1a692", "#de6e56", "#e14b31", "#c23728"
+    "#212aa5", "#9ec3ff", "#f5f5f5",
+    "#ebc2b2", "#c23728"
   ),
   
   # Buzz Palette
@@ -337,7 +337,8 @@ scale_fill_doypa <- function(palette = NULL, n = NULL, reverse = FALSE, ramp = F
       ggplot2::scale_fill_manual(values = doypa(palette, n, reverse, ramp), ...)
     }
   } else {
-    ggplot2::scale_fill_gradientn(colours = doypa(palette, 256, reverse, ramp), ...)
+    n <- ifelse(is.null(n), 256, n)
+    ggplot2::scale_fill_gradientn(colours = doypa(palette, n, reverse, ramp), ...)
   }
 }
 
@@ -378,7 +379,8 @@ scale_color_doypa <- function(palette = NULL, n = NULL, reverse = FALSE, ramp = 
       ggplot2::scale_color_manual(values = doypa(palette, n, reverse, ramp), ...)
     }
   } else {
-    ggplot2::scale_color_gradientn(colours = doypa(palette, 256, reverse, ramp), ...)
+    n <- ifelse(is.null(n), 256, n)
+    ggplot2::scale_color_gradientn(colours = doypa(palette, n, reverse, ramp), ...)
   }
 }
 
