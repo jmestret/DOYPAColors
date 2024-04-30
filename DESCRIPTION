@@ -1,7 +1,7 @@
 Package: DOYPAColors
 Type: Package
 Title: Don't Overthink Your Palette of Colors
-Version: 0.0.1
+Version: 0.0.2
 Authors@R: person("Jorge", "Mestre", email = "jormart2@alumni.uv.es",
 		  role = c("aut", "cre"), comment = c(ORCID = "0000-0002-8983-3417"))
 Description: Access diverse 'ggplot2'-compatible color palettes for simplified data visualization.
@@ -19,4 +19,4 @@ Suggests:
 Encoding: UTF-8
 Language: en-US
 LazyData: true
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.1

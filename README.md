@@ -1,8 +1,7 @@
 # DOYPAColors - Don't Overthink Your Palette of Colors <img src="img/logo.png" align="right" alt="" width="120" />
 
 [![cran version](http://www.r-pkg.org/badges/version/DOYPAColors)](https://cran.r-project.org/package=DOYPAColors)
-[![cran downloads](http://cranlogs.r-pkg.org/badges/grand-total/DOYPAColors?color=yellowgreen)](https://github.com/metacran/cranlogs.app)
-[![github downloads](https://img.shields.io/github/downloads/jmestret/DOYPAColors/total?logo=github)](https://github.com/jmestret/DOYPAColors)
+[![cran downloads](http://cranlogs.r-pkg.org/badges/grand-total/DOYPAColors)](https://github.com/metacran/cranlogs.app)
 [![Stars](https://img.shields.io/github/stars/jmestret/DOYPAColors.svg)](https://github.com/jmestret/DOYPAColors/stargazers)
 
 ***
@@ -12,14 +11,14 @@ Tired of agonizing over color choices for your data visualizations? Let DOYPACol
 
 ## Installation
 
-You can install `DOYPAColors` from `CRAN` by:
+You can install `DOYPAColors` from CRAN:
 
 ```{r}
 install.packages("DOYPAColors")
 library(DOYPAColors)
 ```
 
-or you can install the development version from this GitHub repository: 
+or you can install the development version from GitHub: 
 
 ```{r}
 if (!require("devtools")) 
