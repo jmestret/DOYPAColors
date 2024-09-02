@@ -4,12 +4,12 @@
 # diverging, qualitative, and colorblind scenarios.
 
 # Palette categories
-doypa_sequential <- c("cool_blue", "doypa", "imares_blue", "imares_red")
+doypa_sequential <- c("blue", "deep", "blue_purple", "purple", "yellow_green", "doypa_qual",  "regal_blue", "red", "orange", "pink", "gray")
 doypa_diverging <- c("blue2red", "purple2green", "mir")
-doypa_qualitative <- c("astro", "buzz", "cyberpunk", "deep", "earth", "goofy", 
-                       "google", "groovy", "high_contrast", "nature", "retro", 
+doypa_qualitative <- c("astro", "buzz", "cyberpunk", "earth", "goofy", 
+                       "google", "doypa", "high_contrast", "nature", "retro", 
                        "rookie", "snack", "sunset", "tidy", "vaporwave", "vintage")
-doypa_colorblind <- c("groovy")
+doypa_colorblind <- c("doypa")
 
 # Assign palette names
 names(doypa_sequential) <- doypa_sequential
@@ -20,13 +20,29 @@ names(doypa_colorblind) <- doypa_colorblind
 # Color palettes list
 doypa_pals <- list(
   ## Sequential Palettes - n = 9 colors
-  cool_blue =      c("#e0ffff", "#c8e3ff", "#afc7ff", "#97abff", "#7e90ff", "#6674ff", "#4d58ff", "#353cff", "#1c20ff"),
+  blue =           c("#e0ffff", "#c8e3ff", "#afc7ff", "#97abff", "#7e90ff", "#6674ff", "#4d58ff", "#353cff", "#1c20ff"),
   
-  doypa =          c("#bceecb", "#91debc", "#67cdac", "#42ba9b", "#7f9d3a", "#d47200", "#d64b02", "#ba2314", "#880024"),
+  deep =           c("#cdf8ff", "#b9dff0", "#a6c5d9", "#93acc2", "#7f92ab", "#6c7994", "#595f7d", "#454666", "#322c4f"),
   
-  imares_blue =    c("#aaf0e2", "#8fdbd4", "#73c5c6", "#58afb8", "#3c99aa", "#21839c", "#056d8e", "#005780", "#004172"),
+  blue_purple =    c("#cdf8ff", "#c2d1ff", "#b7aaff", "#ad82ff", "#a25bfd", "#874ed3", "#6a43a7", "#4e377b", "#322c4f"),
   
-  imares_red =     c("#ffcd7e", "#ffb073", "#ff9269", "#ff755e", "#e85754", "#cd3a49", "#b31c3f", "#990034", "#7e002a"),
+  purple =         c("#ffe1ff", "#ffcaff", "#e9b4ff", "#ca9dfa", "#ac87d7", "#8d70b5", "#6f5993", "#514371", "#322c4f"),
+    
+  yellow_green =   c("#fefee0", "#aae6a9", "#56cf72", "#02b73b", "#009e1b", "#00831b", "#0c681b", "#1c4e1e", "#003b31"),
+  
+  doypa_qual =     c("#bceecb", "#91debc", "#67cdac", "#42ba9b", "#7f9d3a", "#d47200", "#d64b02", "#ba2314", "#880024"),
+  
+  regal_blue =     c("#aaf0e2", "#8fdbd4", "#73c5c6", "#58afb8", "#3c99aa", "#21839c", "#056d8e", "#005780", "#004172"),
+  
+  blue_red =       c("#9fe5d7", "#65c4d8", "#39a6d5", "#2b8fc7", "#f67d33", "#f44934", "#ca3a43", "#9e0142"),
+  
+  red =            c("#ffcd7e", "#ffb073", "#ff9269", "#ff755e", "#e85754", "#cd3a49", "#b31c3f", "#990034", "#7e002a"),
+  
+  orange =         c("#ffe440", "#ffc238", "#ff9f2f", "#ff7d26", "#fe5a1d", "#de3a0b", "#be1900", "#9e0000", "#7e0000"),
+  
+  pink =           c("#fff0f3", "#ffc7d2", "#ff9fb0", "#ff768f", "#ff4d6d", "#d53d5a", "#ac2d48", "#821d35", "#580d22"),
+  
+  gray =           c("#f1f0f6", "#d6d4d9", "#bbb8bc", "#9f9c9f", "#848082", "#6f6c6e", "#5b585a", "#464446", "#313033"),
   
   ## Diverging Palettes - n = 11 colors
   blue2red =       c("#232ba7", "#545ab9", "#8b8fce", "#bfc1e1", "#e6e6ef", "#f5f5f5", "#ede2e3", "#d8b0b4", "#bc6d74", "#9e2631", "#840000"),
@@ -42,15 +58,13 @@ doypa_pals <- list(
   
   cyberpunk =      c("#DFD828", "#61A059", "#085857", "#313638", "#ff2a6d", "#B0BA83"),
   
-  deep =           c("#255e65", "#d9bea1", "#a2a8a9", "#a88565", "#3591a0"),
-  
   earth =          c("#D52429", "#F1602C", "#EC8922", "#915018", "#6C3F18"),
   
   goofy =          c("#F58221", "#00AEEF", "#313638", "#F3D9CE", "#A6CE39"),
   
   google =         c("#4285F4", "#34A853", "#FBBC05", "#EA4335"),
   
-  groovy =         c("#2BAF90", "#A1D4B1", "#F1A512", "#DD4111", "#8C0027"),
+  doypa =          c("#2BAF90", "#A1D4B1", "#F1A512", "#DD4111", "#8C0027"),
   
   high_contrast =  c("#00B5B0", "#00FF28", "#FFC700", "#FF0000", "#C70083", "#9500AC"),
   

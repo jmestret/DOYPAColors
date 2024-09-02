@@ -4,22 +4,20 @@
 \alias{preview_pal}
 \title{Preview a Single Color Palette}
 \usage{
-preview_pal(colors = NULL)
+preview_pal(palette, seed = NULL)
 }
 \arguments{
-\item{colors}{A vector of colors to preview.}
+\item{palette}{A character string specifying the name of the palette to use.}
+
+\item{seed}{An optional seed for reproducibility of random numbers.}
 }
 \value{
-A 'ggplot' visualization of a color palette for exploring and selecting color schemes in your data visualizations.
+A `ggplot` object with multiple plots arranged in a grid, showcasing the color palette in different visualizations.
 }
 \description{
-This function generates a visual preview of a single color palette, allowing you to explore and select color schemes for your data visualizations.
+This function generates a visual preview of a DOYPAColors palette with multiple plots. It includes a direct palette preview, a scatter plot, a bar plot, and a heatmap, each using the specified palette.
 }
 \examples{
-# Preview a custom vector of colors
-custom_colors <- c("#FF5733", "#33FF57", "#5733FF")
-preview_pal(colors = custom_colors)
-
-# Preview default DOYPAColors palettes
-preview_pal(doypa("buzz"))
+# Preview a DOYPAColors palette with multiple plots
+preview_pal(palette = "buzz")
 }

@@ -7,10 +7,11 @@
 list_doypa_pals()
 }
 \value{
-A named list containing the names of available color palettes for each type.
+A named list containing the names of available color palettes for each type: "sequential", "diverging", and "qualitative".
 }
 \description{
 This function provides a list of all available DOYPAColors color palettes, categorized by type: sequential, diverging, and qualitative.
+It helps users to explore the various color palettes available for use in their visualizations.
 }
 \examples{
 # List available DOYPAColors color palettes by type

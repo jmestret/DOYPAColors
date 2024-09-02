@@ -7,21 +7,21 @@
 preview_doypa_pals(type = "all", colorblind = FALSE)
 }
 \arguments{
-\item{type}{Character string specifying the type of palettes to preview: "all", "seq" (sequential), "div" (diverging), or "qual" (qualitative).}
+\item{type}{Character string specifying the type of palettes to preview. Options are: "all" (default), "seq" (sequential), "div" (diverging), or "qual" (qualitative).}
 
-\item{colorblind}{Logical. If 'TRUE', restricts the palettes to those suitable for colorblind individuals.}
+\item{colorblind}{Logical. If `TRUE`, restricts the preview to palettes designed with colorblind individuals in mind.}
 }
 \value{
-A 'ggplot' visualization of DOYPAColors color palettes for exploring and selecting color schemes in your data visualizations.
+A `ggplot` visualization displaying the DOYPAColors color palettes, facilitating exploration and selection of color schemes for data visualizations.
 }
 \description{
-This function generates a visual preview of DOYPAColors color palettes, facilitating the exploration and selection of color schemes for your data visualizations.
+This function generates a visual preview of DOYPAColors color palettes. It helps users explore and select color schemes for their data visualizations by displaying each palette in a grid format.
 }
 \examples{
 # Preview all available DOYPAColors palettes
 preview_doypa_pals()
 
-# Preview sequential DOYPAColors palettes
+# Preview only sequential DOYPAColors palettes
 preview_doypa_pals(type = "seq")
 
 # Preview colorblind-friendly DOYPAColors palettes

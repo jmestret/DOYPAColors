@@ -16,28 +16,28 @@ scale_fill_doypa(
 )
 }
 \arguments{
-\item{palette}{Character string specifying the desired palette name.}
+\item{palette}{A character string specifying the name of the palette to use. If `NULL`, a random palette will be selected.}
 
-\item{n}{Number of colors needed.}
+\item{n}{Number of colors needed. If `NULL`, it will default to the number of levels for discrete scales or to a continuous gradient for continuous scales.}
 
-\item{reverse}{Boolean indicating whether to reverse the order of colors in the palette (default: FALSE).}
+\item{reverse}{A logical value indicating whether to reverse the order of colors in the palette. Default is `FALSE`.}
 
-\item{gradient}{Boolean indicating whether to use a color gradient (interpolation) or a vector of colors (default: FALSE).}
+\item{gradient}{A logical value indicating whether to interpolate colors as a  gradient of `n` colors between the first and last colors of the palette. If `FALSE`, returns the first `n` colors of the palette.}
 
 \item{discrete}{Boolean indicating whether to generate a discrete or continuous palette (default: continuous).}
 
-\item{type}{Character specifying the type of palettes to consider when choosing a random one.
-Options: "all" (default), "seq" (sequential), "div" (diverging), "qual" (qualitative).}
+\item{type}{A character string specifying the type of palettes to select from: "all", "seq" (sequential), "div" (diverging), or "qual" (qualitative). Default is "all".}
 
-\item{colorblind}{Logical. Set to 'TRUE' for palettes designed with consideration for colorblind individuals.}
+\item{colorblind}{A logical value indicating whether to restrict the palette to colorblind-friendly options. Default is `FALSE`.}
 
-\item{...}{Additional parameters to pass to ggplot2's scale_fill functions.}
+\item{...}{Additional parameters passed to ggplot2's `scale_fill_*` functions.}
 }
 \value{
 A `ggplot2` fill scale suitable for adding to a `ggplot2` object to control fill aesthetics.
 }
 \description{
-This function sets the fill scale for ggplot2 using DOYPAColors color palettes.
+This function sets the fill scale for ggplot2 using DOYPAColors color palettes, allowing you to 
+use these palettes in your ggplot2 visualizations for both discrete and continuous data.
 }
 \examples{
 library(ggplot2)
@@ -54,4 +54,11 @@ cont <- ggplot(faithfuld, aes(waiting, eruptions, fill = density)) +
   geom_tile() + theme_classic()
 cont <- cont + scale_fill_doypa(palette = "buzz")
 print(cont)
+
+# Colorblind-friendly palette
+disc_colorblind <- ggplot(iris, aes(x = Species, y = Petal.Length, fill = Species)) +
+  geom_boxplot() + theme_classic()
+disc_colorblind <- disc_colorblind + scale_fill_doypa(colorblind = TRUE, discrete = TRUE)
+print(disc_colorblind)
+
 }

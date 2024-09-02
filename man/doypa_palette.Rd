@@ -13,30 +13,29 @@ doypa_palette(
 )
 }
 \arguments{
-\item{palette}{Character string specifying the desired palette name.}
+\item{palette}{A character string specifying the name of the palette to use. If `NULL`, a random palette will be selected.}
 
-\item{reverse}{Logical. If 'TRUE', reverses the order of colors in the palette.}
+\item{reverse}{A logical value indicating whether to reverse the order of colors in the palette. Default is `FALSE`.}
 
-\item{gradient}{Logical. If 'TRUE', the returned function generates a color gradient (interpolation) instead of a vector of colors.}
+\item{gradient}{A logical value indicating whether to interpolate colors as a  gradient of `n` colors between the first and last colors of the palette. If `FALSE`, returns the first `n` colors of the palette.}
 
-\item{type}{Character specifying the type of palettes to consider when choosing a random one.
-Options: "all" (default), "seq" (sequential), "div" (diverging), "qual" (qualitative).}
+\item{type}{A character string specifying the type of palettes to select from: "all", "seq" (sequential), "div" (diverging), or "qual" (qualitative). Default is "all".}
 
-\item{colorblind}{Logical. Set to 'TRUE' for palettes designed with consideration for colorblind individuals.}
+\item{colorblind}{A logical value indicating whether to restrict the palette to colorblind-friendly options. Default is `FALSE`.}
 }
 \value{
-A function that generates a vector of 'n' colors or a color gradient.
+A function that generates a vector of `n` colors or a color gradient.
 }
 \description{
-This function creates a function that generates a color vector of n colors 
-for a specified DOYPAColors palette.
+This function creates a function that generates a color vector of `n` colors 
+for a specified DOYPAColors palette. The generated function allows you to 
+easily create customized color palettes with a specified number of colors.
 }
 \examples{
-\dontrun{
 # Create a function for generating colors from the "buzz" palette
-get_buzz_palette <- doypa_palette(palette = "buzz")
+get_buzz_palette <- DOYPAColors:::doypa_palette(palette = "buzz")
 color_palette <- get_buzz_palette(5)
-preview_pal(colors = color_palette)
-}
+print(color_palette)
+
 }
 \keyword{internal}

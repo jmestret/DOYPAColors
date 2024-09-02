@@ -2,7 +2,7 @@
 % Please edit documentation in R/scales.R
 \name{doypa}
 \alias{doypa}
-\title{Get a DOYPAColors color palette}
+\title{DOYPAColors Palette Selector}
 \usage{
 doypa(
   palette = NULL,
@@ -14,33 +14,45 @@ doypa(
 )
 }
 \arguments{
-\item{palette}{Character string specifying the desired palette name.}
+\item{palette}{A character string specifying the name of the palette to use. If `NULL`, a random palette will be selected.}
 
-\item{n}{Number of colors needed. Must be a positive numeric value.}
+\item{n}{An integer specifying the number of colors to return. If `NULL`, the full palette is returned.}
 
-\item{reverse}{Logical. If 'TRUE', reverses the order of colors in the palette.}
+\item{reverse}{A logical value indicating whether to reverse the order of colors in the palette. Default is `FALSE`.}
 
-\item{gradient}{Logical. If 'TRUE', interpolates a color gradient of n colors between the first and last colors of the palette. If 'FALSE', returns the first n colors of the palette.}
+\item{gradient}{A logical value indicating whether to interpolate colors as a  gradient of `n` colors between the first and last colors of the palette. If `FALSE`, returns the first `n` colors of the palette.}
 
-\item{type}{Character specifying the type of palettes to consider when choosing a random one.
-Options: "all" (default), "seq" (sequential), "div" (diverging), "qual" (qualitative).}
+\item{type}{A character string specifying the type of palettes to select from: "all", "seq" (sequential), "div" (diverging), or "qual" (qualitative). Default is "all".}
 
-\item{colorblind}{Logical. Set to 'TRUE' for palettes designed with consideration for colorblind individuals.}
+\item{colorblind}{A logical value indicating whether to restrict the palette to colorblind-friendly options. Default is `FALSE`.}
 }
 \value{
-A vector of 'n' colors.
+A character vector of colors.
 }
 \description{
-This function generates a color vector of n colors for a specified palette.
+This function provides access to the DOYPAColors palettes, which are categorized into sequential, diverging, and qualitative types. 
+You can select a palette, define the number of colors, reverse the order, and interpolate colors as a gradient.
 }
 \examples{
-# Generate a random color palette
-color_palette <- doypa()
-preview_pal(colors = color_palette)
+# Get a palette by name
+colors <- doypa("buzz")
+print(colors)
 
-# Generate a color palette of 5 colors using the "buzz" palette
-color_palette <- doypa(palette = "buzz", n = 5)
-preview_pal(colors = color_palette)
+# Get a random palette
+colors <- doypa()
+print(colors)
+
+# Get a palette with a specific number of colors
+colors <- doypa("google", n = 3)
+print(colors)
+
+# Reverse the order of the palette
+colors <- doypa("buzz", reverse = TRUE)
+print(colors)
+
+# Interpolate colors as a gradient
+colors <- doypa("buzz", n = 10, gradient = TRUE)
+print(colors)
 
 }
 \seealso{
