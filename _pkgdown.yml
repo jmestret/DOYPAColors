@@ -17,8 +17,6 @@ reference:
   - '`preview_doypa_pals`'
   - '`preview_pal`'
 - title: Helper functions
-  contents:
-  - '`doypa_palette`'
+  contents: '`doypa_palette`'
 navbar:
   type: inverse
-  
