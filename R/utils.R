@@ -113,7 +113,7 @@ preview_pal <- function(palette, seed = NULL) {
   
   # Bar Plot
   bar_data <- data.frame(
-    category = factor(1:length(doypa_colors)),
+    category = factor(seq_len(length(doypa_colors))),
     value = runif(length(doypa_colors), min = 0.5, max = 2)  # Random values for bar heights
   )
   
@@ -128,7 +128,7 @@ preview_pal <- function(palette, seed = NULL) {
   
   # Scatter Plot with Clustered Data
   cluster_means <- matrix(runif(2 * length(doypa_colors), min = -length(doypa_colors), max = length(doypa_colors)), ncol = 2)
-  scatter_data <- do.call(rbind, lapply(1:length(doypa_colors), function(i) {
+  scatter_data <- do.call(rbind, lapply(seq_len(length(doypa_colors)), function(i) {
     data.frame(
       x = rnorm(100, mean = cluster_means[i, 1], sd = 1),
       y = rnorm(100, mean = cluster_means[i, 2], sd = 1),

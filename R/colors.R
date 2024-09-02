@@ -4,11 +4,13 @@
 # diverging, qualitative, and colorblind scenarios.
 
 # Palette categories
-doypa_sequential <- c("blue", "deep", "blue_purple", "purple", "yellow_green", "doypa_qual",  "regal_blue", "red", "orange", "pink", "gray")
+doypa_sequential <- c("blue", "deep", "blue_purple", "purple", "yellow_green", 
+                      "doypa_qual", "regal_blue", "blue_red", "red", "orange", 
+                      "pink", "gray")
 doypa_diverging <- c("blue2red", "purple2green", "mir")
-doypa_qualitative <- c("astro", "buzz", "cyberpunk", "earth", "goofy", 
-                       "google", "doypa", "high_contrast", "nature", "retro", 
-                       "rookie", "snack", "sunset", "tidy", "vaporwave", "vintage")
+doypa_qualitative <- c("astro", "buzz", "cyberpunk", "earth", "goofy", "google", 
+                       "doypa", "high_contrast", "nature", "retro", "rookie", 
+                       "snack", "sunset", "tidy", "vaporwave")
 doypa_colorblind <- c("doypa")
 
 # Assign palette names

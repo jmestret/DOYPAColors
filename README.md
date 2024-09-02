@@ -7,7 +7,8 @@
 
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/DOYPAColors?color=blue)](https://cran.r-project.org/package=DOYPAColors)
 [![R-CMD-check](https://github.com/jmestret/DOYPAColors/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/jmestret/DOYPAColors/actions/workflows/R-CMD-check.yaml)
-[![codecov](https://codecov.io/gh/jmestret/DOYPAColors/graph/badge.svg?token=LID8Q55SMD)](https://app.codecov.io/gh/jmestret/DOYPAColors)
+[![Codecov test
+coverage](https://codecov.io/gh/jmestret/DOYPAColors/branch/main/graph/badge.svg)](https://app.codecov.io/gh/jmestret/DOYPAColors?branch=main)
 <!-- badges: end -->
 
 ## Overview
@@ -61,8 +62,15 @@ ggplot(iris, aes(x = Species, y = Sepal.Length, fill = Species)) +
     theme_classic()
 ```
 
+You can explore how specific palettes fit different types of data using
+the `preview_pal()` function:
+
+``` r
+preview_pal("doypa")
+```
+
 <p align="center">
-<img src="man/figures/discrete_plot.png" width="500">
+<img src="man/figures/preview_plot.png" width="500">
 </p>
 
 ### Available palettes
