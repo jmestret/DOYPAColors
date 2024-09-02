@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/DOYPAColors?color=blue)](https://cran.r-project.org/package=DOYPAColors)
 [![R-CMD-check](https://github.com/jmestret/DOYPAColors/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/jmestret/DOYPAColors/actions/workflows/R-CMD-check.yaml)
-[![Codecov test coverage](https://codecov.io/gh/jmestret/DOYPAColors/branch/main/graph/badge.svg)](https://app.codecov.io/gh/jmestret/DOYPAColors?branch=main)
+[![codecov](https://codecov.io/gh/jmestret/DOYPAColors/graph/badge.svg?token=IU6UAU5F3K)](https://codecov.io/gh/jmestret/DOYPAColors)
 <!-- badges: end -->
 
 ## Overview
