@@ -1,120 +1,110 @@
-# DOYPAColors - Don't Overthink Your Palette of Colors <img src="img/logo.png" align="right" alt="" width="120" />
 
-[![cran version](http://www.r-pkg.org/badges/version/DOYPAColors)](https://cran.r-project.org/package=DOYPAColors)
-[![cran downloads](http://cranlogs.r-pkg.org/badges/grand-total/DOYPAColors?color=yellowgreen)](https://github.com/metacran/cranlogs.app)
-[![github downloads](https://img.shields.io/github/downloads/jmestret/DOYPAColors/total?logo=github)](https://github.com/jmestret/DOYPAColors)
-[![Stars](https://img.shields.io/github/stars/jmestret/DOYPAColors.svg)](https://github.com/jmestret/DOYPAColors/stargazers)
+<!-- README.md is generated from README.Rmd. Please edit that file -->
 
-***
+# DOYPAColors <a href="https://jmestret.github.io/DOYPAColors/"><img src="man/figures/logo.png" align="right" height="120" /></a>
 
-Tired of agonizing over color choices for your data visualizations? Let DOYPAColors do the heavy lifting for you! Our R package offers a delightful array of color palettes, each meticulously crafted and ready to breathe life into your plots. We'll even surprise you with a palette choice, so you can focus on what matters most—telling your data's unique story. Say goodbye to color selection headaches and hello to vibrant, eye-catching visuals with **DOYPAColors** 🎨!
+<!-- badges: start -->
 
+[![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/DOYPAColors?color=blue)](https://cran.r-project.org/package=DOYPAColors)
+[![R-CMD-check](https://github.com/jmestret/DOYPAColors/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/jmestret/DOYPAColors/actions/workflows/R-CMD-check.yaml)
+[![Codecov test
+coverage](https://codecov.io/gh/jmestret/DOYPAColors/branch/main/graph/badge.svg)](https://app.codecov.io/gh/jmestret/DOYPAColors?branch=main)
+<!-- badges: end -->
+
+## Overview
+
+Tired of agonizing over color choices for your data visualizations? Let
+**DOYPAColors** do the heavy lifting for you! Our R package provides a
+delightful array of color palettes, each meticulously crafted to enhance
+your plots. With **DOYPAColors**, you can even let us surprise you with
+a palette choice, so you can focus on what matters most—telling your
+data’s unique story. Say goodbye to color selection headaches and hello
+to vibrant, eye-catching visuals! 🎨
 
 ## Installation
 
-You can install `DOYPAColors` from `CRAN` by:
+To install **DOYPAColors** from CRAN, use:
 
-```{r}
+``` r
 install.packages("DOYPAColors")
-library(DOYPAColors)
 ```
 
-or you can install the development version from this GitHub repository: 
+For the development version from GitHub, use:
 
-```{r}
-if (!require("devtools")) 
+``` r
+if (!require("devtools")) {
   install.packages("devtools")
+}
 
 devtools::install_github("jmestret/DOYPAColors")
+```
+
+## How to use
+
+Using **DOYPAColors** is straightforward. Access and utilize our
+palettes in your R plots with a single line of code:
+
+``` r
 library(DOYPAColors)
+color_palette <- doypa()
 ```
 
-## How to use?
+You can then apply these palettes to your `ggplot2` plots using the
+functions `scale_fill_doypa()` and `scale_color_doypa()`:
 
-You can easily access and utilize the DOYPAColors palettes in your R plots with the following steps:
+``` r
+library(ggplot2)
 
-### Preview available palettes
-
-To get a sneak peek at the available color palettes, you can use the `preview_doypa_pals()` function:
-
-```{r}
-preview_doypa_pals()
-```
-
-![DOYPAColors palettes](img/color_palettes.png)
-
-Additionally, you can simply list the names of the available palettes by running:
-
-```{r}
-list_doypa_pals()
-```
-
-### Applying palettes to your plots
-
-Integrating DOYPAColors palettes into your plots is straightforward with the ggplot-style functions `scale_fill_doypa()` and `scale_color_doypa()`. By setting the `palette` argument, you can select your preferred palette, or leave it blank, and we'll choose one for you. You also have the option to control whether the color scale is discrete or continuous using the `discrete` argument:
-
-```{r}
+# Create a bar plot with a DOYPAColors palette
 ggplot(iris, aes(x = Species, y = Sepal.Length, fill = Species)) +
     geom_boxplot() +
     scale_fill_doypa(discrete = TRUE) +
     theme_classic()
 ```
-*We've handpicked the exciting 'nature' palette for you - no overthinking required!*
 
-<p align="center">
-  <img src="img/discrete_plot.png" width="500">
-</p>
+You can explore how specific palettes fit different types of data using
+the `preview_pal()` function:
 
-
-With the `n` argument, you can specify how many colors to use in your plot:
-
-```{r}
-ggplot(iris, aes(x = Species, y = Sepal.Length, fill = Species)) +
-    geom_boxplot() +
-    scale_fill_doypa(palette = "buzz", n = 3, discrete = TRUE) +
-    theme_classic()
+``` r
+preview_pal("doypa")
 ```
 
 <p align="center">
-  <img src="img/n5_plot.png" width="500">
+<img src="man/figures/preview_plot.png" width="500">
 </p>
 
-The reverse argument allows you to `reverse` the order of the color palette. You can experiment with the combination of `n` and `reverse` to control the reverse order for the entire palette or just the first `n` colors:
+### Available palettes
 
-```{r}
-p1 <- ggplot(iris, aes(x = Species, y = Sepal.Length, fill = Species)) +
-    geom_boxplot() +
-    scale_fill_doypa(palette = "buzz", reverse = TRUE, discrete = TRUE) +
-    theme_classic() +
-    theme(legend.position = "none") +
-    ggtitle("n = NULL, reverse = TRUE")
-
-p2 <- ggplot(iris, aes(x = Species, y = Sepal.Length, fill = Species)) +
-    geom_boxplot() +
-    scale_fill_doypa(palette = "buzz", n = 3, reverse = TRUE, discrete = TRUE) +
-    theme_classic() +
-    theme(legend.position = "none") +
-    ggtitle("n = 3, reverse = TRUE")
-
-ggpubr::ggarrange(p1, p2)
-```
+Here’s a visualization of all available palettes in **DOYPAColors**:
 
 <p align="center">
-  <img src="img/reverse_plot.png" width="500">
+<img src="man/figures/color_palettes.png" width="500">
 </p>
 
-For even more versatility, the `ramp` argument enables you to create a color ramp and interpolate colors from the chosen color palette:
+For more advanced usage and options, check out our
+[web](https://jmestret.github.io/DOYPAColors/) to get the most out of
+**DOYPAColors** palettes!
 
-```{r}
-ggplot(iris, aes(x = Species, y = Sepal.Length, fill = Species)) +
-    geom_boxplot() +
-    scale_fill_doypa(palette = "buzz", ramp = TRUE, discrete = TRUE) +
-    theme_classic()
-```
+## Contributing
 
-<p align="center">
-  <img src="img/ramp_plot.png" width="500">
-</p>
+We welcome contributions from the community! If you have a new color
+palette you’d like to share, we’d be thrilled to consider it for
+inclusion in **DOYPAColors**. To submit your palette:
 
-Feel free to explore the various combinations of arguments to discover all the captivating DOYPAColors palettes!
+1.  Provide a name for your palette.
+2.  Specify the type of palette (sequential, diverging, or qualitative).
+3.  List the HEX color codes for your palette.
 
+You can submit your palette details by opening an issue or a pull
+request on our [GitHub
+repository](https://github.com/jmestret/DOYPAColors). We will review
+your submission and, if it meets our criteria, we’ll be glad to include
+it in the package!
+
+## How to cite
+
+If you use **DOYPAColors**, please reference the R package as follows:
+
+Jorge Mestre (2023). DOYPAColors: Don’t Overthink Your Palette of
+Colors. R package version 0.0.2,
+<https://cran.r-project.org/web/packages/DOYPAColors>

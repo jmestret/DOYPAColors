@@ -1,0 +1,24 @@
+title: DOYPAColors
+url: https://jmestret.github.io/DOYPAColors/
+template:
+  bootstrap: 5
+  params:
+    bootswatch: flatly
+reference:
+- title: Main functions
+  contents:
+  - '`doypa`'
+  - '`scale_fill_doypa`'
+  - '`scale_color_doypa`'
+  - '`scale_colour_doypa`'
+- title: Previsualization functions
+  contents:
+  - '`list_doypa_pals`'
+  - '`preview_doypa_pals`'
+  - '`preview_pal`'
+- title: Helper functions
+  contents:
+  - '`doypa_palette`'
+navbar:
+  type: inverse
+  

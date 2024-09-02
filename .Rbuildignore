@@ -6,3 +6,9 @@ cran-comments.md
 LICENSE.md
 ^cran-comments\.md$
 ^CRAN-SUBMISSION$
+^README\.Rmd$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
+^codecov\.yml$
+^\.github$
